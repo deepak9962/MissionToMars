@@ -2,7 +2,7 @@
 Udacity Java project
 
 <h1>#Intro Copied from Udacity</h1>
-<h3>Visit <a href="udacity.com">Udacity here</a><h3>
+<h3>Visit <a href="https://udacity.com">Udacity here</a><h3>
 
 
 <img src="https://video.udacity-data.com/topher/2017/August/599a337f_screen-shot-2017-08-21-at-11.12.15-am/screen-shot-2017-08-21-at-11.12.15-am.png" alt="Image used from udacity">
