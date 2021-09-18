@@ -1,7 +1,7 @@
 # MissionToMars
 Udacity Java project
 
-#Intro Copied from Udacity
+<h1>#Intro Copied from Udacity</h1>
 
 
 <img src="https://video.udacity-data.com/topher/2017/August/599a337f_screen-shot-2017-08-21-at-11.12.15-am/screen-shot-2017-08-21-at-11.12.15-am.png" alt="Image used from udacity">
