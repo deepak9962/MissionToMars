@@ -173,22 +173,19 @@ public class Simulation {
         // for loop to test the rockets one by one and calculates the price.
         for (int i = 0; i < rockets.size(); i++) {
             rocket = (Rocket) rockets.get(i);
-            if (rocket.launch()) {  // if successfully launches
-                System.out.println("Rocket " + (i + 1) + " launch successful!");
 
-                if (rocket.land()) {    // if successfully lands
-                    System.out.println("Rocket " + (i + 1) + " land successful!");
-                    totalBudget = totalBudget + rocket.rocketCost;  // calculate the cost and add in the budget
-                } else {    // if crashes at the time of landing
-                    System.out.println("Rocket " + (i + 1) + " crash landing!");
-                    totalBudget = totalBudget + rocket.rocketCost;  // calculate the cost and add in the budget
-                    addNewRocket(rockets, i);   // insert a new rocket
-                }
+            if (!rocket.launch()) {     // If crashed at launching create a new rocket
+                System.out.println("Crashed at Launching : " + "Rocket " + (i + 1));
+                totalBudget = totalBudget + rocket.rocketCost;  // Calculate the total budget
+                addNewRocket(rockets, i);   // Creating a new rocket
+            } else if (!rocket.land()) {    // If crashed at landing create a new rocket
+                System.out.println("Crashed at Landing : " + "Rocket " + (i + 1));
+                totalBudget = totalBudget + rocket.rocketCost;  // Calculate the total budget
+                addNewRocket(rockets, i);   // Creating a new rocket
+            } else {    // Successfully launches and lands
+                System.out.println("Launched and Landed : " + "Rocket " + (i + 1));
+                totalBudget = totalBudget + rocket.rocketCost;  // Calculate the total budget
 
-            } else {    // if crashes at the time of launching
-                System.out.println("Rocket " + (i + 1) + " crashed!");
-                totalBudget = totalBudget + rocket.rocketCost; // calculate the cost and add in the budget
-                addNewRocket(rockets, i);   // insert a new rocket
             }
         }
 
